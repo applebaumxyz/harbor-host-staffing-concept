@@ -1,0 +1,768 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Genuine Staffing & Events - Homepage Mockup</title>
+    <meta
+      name="description"
+      content="Concept homepage mockup for Genuine Staffing & Events."
+    />
+    <style>
+      :root {
+        --ink: #1b2421;
+        --muted: #64706b;
+        --cream: #f7f1e8;
+        --paper: #fffaf3;
+        --sage: #61786c;
+        --copper: #b96e43;
+        --rose: #a94d5a;
+        --line: rgba(27, 36, 33, 0.14);
+        --shadow: 0 22px 70px rgba(26, 31, 27, 0.13);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+        line-height: 1.5;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .wrap {
+        width: min(1180px, calc(100% - 40px));
+        margin-inline: auto;
+      }
+
+      .topbar {
+        background: #1d2a25;
+        color: #f8eee4;
+        font-size: 0.82rem;
+      }
+
+      .topbar .wrap {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 10px 0;
+      }
+
+      .nav {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        border-bottom: 1px solid var(--line);
+        background: rgba(255, 250, 243, 0.92);
+        backdrop-filter: blur(18px);
+      }
+
+      .nav .wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 28px;
+        min-height: 76px;
+      }
+
+      .brand {
+        display: grid;
+        gap: 1px;
+      }
+
+      .brand strong {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(1.25rem, 2vw, 1.65rem);
+        letter-spacing: 0;
+      }
+
+      .brand span {
+        color: var(--muted);
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+      }
+
+      .navlinks {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        color: #394740;
+        font-size: 0.95rem;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 46px;
+        border: 1px solid transparent;
+        border-radius: 999px;
+        padding: 0 21px;
+        background: var(--ink);
+        color: #fffaf3;
+        font-weight: 800;
+        box-shadow: 0 14px 34px rgba(29, 42, 37, 0.18);
+      }
+
+      .button.secondary {
+        background: transparent;
+        color: var(--ink);
+        border-color: rgba(27, 36, 33, 0.24);
+        box-shadow: none;
+      }
+
+      .hero {
+        position: relative;
+        overflow: hidden;
+        min-height: min(620px, calc(100vh - 112px));
+        display: grid;
+        align-items: center;
+        background:
+          linear-gradient(90deg, rgba(20, 28, 25, 0.88), rgba(20, 28, 25, 0.58) 45%, rgba(20, 28, 25, 0.1)),
+          url("https://static.wixstatic.com/media/nsplsh_3cb3f26fc262472682e1b2d2a6624828~mv2.jpg/v1/fill/w_1800,h_1100,al_c,q_85,usm_0.66_1.00_0.01/nsplsh_3cb3f26fc262472682e1b2d2a6624828~mv2.jpg")
+            center / cover;
+      }
+
+      .hero .wrap {
+        padding: 46px 0 74px;
+      }
+
+      .hero-copy {
+        width: min(710px, 100%);
+        color: #fffaf3;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        color: #f1d2b6;
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .eyebrow::before {
+        content: "";
+        width: 34px;
+        height: 1px;
+        background: currentColor;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        line-height: 0.98;
+        letter-spacing: 0;
+      }
+
+      h1 {
+        font-size: clamp(3.1rem, 5.2vw, 4.35rem);
+        max-width: 760px;
+      }
+
+      .hero p {
+        max-width: 610px;
+        margin: 24px 0 0;
+        color: rgba(255, 250, 243, 0.84);
+        font-size: clamp(1.06rem, 1.8vw, 1.28rem);
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 34px;
+      }
+
+      .hero-actions .button.secondary {
+        color: #fffaf3;
+        border-color: rgba(255, 250, 243, 0.45);
+      }
+
+      .proof-strip {
+        margin-top: -42px;
+        position: relative;
+        z-index: 2;
+      }
+
+      .proof-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fffaf3;
+        box-shadow: var(--shadow);
+      }
+
+      .proof {
+        min-height: 118px;
+        padding: 24px;
+        border-right: 1px solid var(--line);
+      }
+
+      .proof:last-child {
+        border-right: 0;
+      }
+
+      .proof strong {
+        display: block;
+        margin-bottom: 7px;
+        font-size: 1.05rem;
+      }
+
+      .proof span {
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      section:not(.hero) {
+        padding: 90px 0;
+      }
+
+      .section-head {
+        display: grid;
+        grid-template-columns: minmax(0, 0.95fr) minmax(260px, 0.7fr);
+        align-items: end;
+        gap: 42px;
+        margin-bottom: 36px;
+      }
+
+      h2 {
+        font-size: clamp(2.25rem, 4.5vw, 4.4rem);
+      }
+
+      .section-head p,
+      .intro p,
+      .service p,
+      .step p,
+      .quote p {
+        color: var(--muted);
+      }
+
+      .services {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+      }
+
+      .service {
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fffdf9;
+      }
+
+      .service img {
+        width: 100%;
+        aspect-ratio: 1.2;
+        object-fit: cover;
+      }
+
+      .service-body {
+        padding: 24px;
+      }
+
+      .service h3 {
+        font-size: 1.65rem;
+      }
+
+      .service p {
+        margin: 14px 0 18px;
+      }
+
+      .service .mini {
+        color: var(--copper);
+        font-size: 0.78rem;
+        font-weight: 900;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .split {
+        background: var(--cream);
+      }
+
+      .split-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+        gap: 52px;
+        align-items: center;
+      }
+
+      .intro h2 {
+        margin-bottom: 20px;
+      }
+
+      .steps {
+        display: grid;
+        gap: 14px;
+      }
+
+      .step {
+        display: grid;
+        grid-template-columns: 52px 1fr;
+        gap: 18px;
+        padding: 22px;
+        border: 1px solid rgba(27, 36, 33, 0.12);
+        border-radius: 8px;
+        background: rgba(255, 250, 243, 0.68);
+      }
+
+      .number {
+        display: grid;
+        place-items: center;
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        background: #1d2a25;
+        color: #fffaf3;
+        font-weight: 900;
+      }
+
+      .step h3 {
+        font-family: inherit;
+        font-size: 1.05rem;
+        line-height: 1.2;
+      }
+
+      .step p {
+        margin: 7px 0 0;
+      }
+
+      .quote-band {
+        background: #1d2a25;
+        color: #fffaf3;
+      }
+
+      .quote-grid {
+        display: grid;
+        grid-template-columns: 0.72fr 1fr;
+        gap: 46px;
+        align-items: center;
+      }
+
+      .quote-grid img {
+        width: 100%;
+        min-height: 430px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+
+      .quote .stars {
+        color: #f0bc78;
+        letter-spacing: 0.16em;
+      }
+
+      .quote p {
+        margin: 22px 0;
+        color: rgba(255, 250, 243, 0.83);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(1.75rem, 3vw, 3.25rem);
+        line-height: 1.12;
+      }
+
+      .quote strong {
+        display: block;
+      }
+
+      .custom {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+      }
+
+      .custom-item {
+        min-height: 270px;
+        display: grid;
+        align-content: end;
+        overflow: hidden;
+        position: relative;
+        border-radius: 8px;
+        padding: 26px;
+        color: #fffaf3;
+        background:
+          linear-gradient(180deg, rgba(29, 42, 37, 0.12), rgba(29, 42, 37, 0.85)),
+          url("https://static.wixstatic.com/media/011f616116e74eca98fc0c0f09152c64.jpg/v1/fill/w_900,h_680,al_c,q_85,usm_0.66_1.00_0.01/011f616116e74eca98fc0c0f09152c64.jpg")
+            center / cover;
+      }
+
+      .custom-item:nth-child(2) {
+        background:
+          linear-gradient(180deg, rgba(29, 42, 37, 0.12), rgba(29, 42, 37, 0.85)),
+          url("https://static.wixstatic.com/media/nsplsh_615c8347746b48a9b642f60cb902ff34~mv2.jpg/v1/fill/w_900,h_680,al_c,q_85,usm_0.66_1.00_0.01/nsplsh_615c8347746b48a9b642f60cb902ff34~mv2.jpg")
+            center / cover;
+      }
+
+      .custom-item h3 {
+        font-size: 2rem;
+      }
+
+      .custom-item p {
+        max-width: 450px;
+        margin: 10px 0 0;
+        color: rgba(255, 250, 243, 0.78);
+      }
+
+      .cta {
+        padding: 0 0 90px;
+      }
+
+      .cta-panel {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 30px;
+        align-items: center;
+        border-radius: 8px;
+        padding: clamp(28px, 5vw, 56px);
+        background: #fffdf9;
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow);
+      }
+
+      .cta-panel h2 {
+        max-width: 760px;
+      }
+
+      .cta-panel p {
+        max-width: 630px;
+        margin: 16px 0 0;
+        color: var(--muted);
+      }
+
+      footer {
+        padding: 36px 0;
+        background: #141c19;
+        color: rgba(255, 250, 243, 0.72);
+      }
+
+      footer .wrap {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+      }
+
+      footer strong {
+        color: #fffaf3;
+      }
+
+      @media (max-width: 860px) {
+        .topbar .wrap,
+        .navlinks {
+          display: none;
+        }
+
+        .nav .wrap {
+          min-height: 68px;
+        }
+
+        .hero {
+          min-height: 720px;
+          background:
+            linear-gradient(180deg, rgba(20, 28, 25, 0.9), rgba(20, 28, 25, 0.56)),
+            url("https://static.wixstatic.com/media/nsplsh_3cb3f26fc262472682e1b2d2a6624828~mv2.jpg/v1/fill/w_900,h_1100,al_c,q_85,usm_0.66_1.00_0.01/nsplsh_3cb3f26fc262472682e1b2d2a6624828~mv2.jpg")
+              center / cover;
+        }
+
+        .proof-grid,
+        .services,
+        .section-head,
+        .split-grid,
+        .quote-grid,
+        .custom,
+        .cta-panel {
+          grid-template-columns: 1fr;
+        }
+
+        .proof {
+          border-right: 0;
+          border-bottom: 1px solid var(--line);
+        }
+
+        .proof:last-child {
+          border-bottom: 0;
+        }
+
+        section:not(.hero) {
+          padding: 64px 0;
+        }
+
+        .quote-grid img {
+          min-height: 300px;
+        }
+
+        .cta {
+          padding-bottom: 64px;
+        }
+      }
+
+      @media (max-width: 520px) {
+        .wrap {
+          width: min(100% - 28px, 1180px);
+        }
+
+        h1 {
+          font-size: clamp(3rem, 15vw, 4.9rem);
+        }
+
+        .hero .wrap {
+          padding-top: 52px;
+        }
+
+        .hero-actions .button {
+          width: 100%;
+        }
+
+        .service-body,
+        .step,
+        .proof {
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="topbar">
+      <div class="wrap">
+        <span>South Florida event staffing for private events, weddings, and corporate gatherings</span>
+        <span>843.467.9489 | 561.714.9455</span>
+      </div>
+    </div>
+
+    <header class="nav" aria-label="Primary navigation">
+      <div class="wrap">
+        <a class="brand" href="#">
+          <strong>Genuine Staffing</strong>
+          <span>Hospitality & Events</span>
+        </a>
+        <nav class="navlinks" aria-label="Site links">
+          <a href="#services">Services</a>
+          <a href="#process">How it works</a>
+          <a href="#details">Event details</a>
+          <a href="#contact" class="button">Plan Your Staff</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="wrap">
+          <div class="hero-copy">
+            <span class="eyebrow">Concept homepage mockup</span>
+            <h1>Event staff that make hosting feel effortless.</h1>
+            <p>
+              Bartenders, waitstaff, and kitchen support for polished South Florida events. Genuine Staffing & Events helps hosts deliver warm service, smooth flow, and a guest experience that feels handled from start to finish.
+            </p>
+            <div class="hero-actions">
+              <a class="button" href="#contact">Request Event Staff</a>
+              <a class="button secondary" href="#services">Explore Services</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="proof-strip">
+        <div class="wrap">
+          <div class="proof-grid" aria-label="Service highlights">
+            <div class="proof">
+              <strong>Private parties</strong>
+              <span>Attentive service for intimate dinners, celebrations, and home events.</span>
+            </div>
+            <div class="proof">
+              <strong>Weddings</strong>
+              <span>Reliable hospitality support for cocktail hour, dinner, and reception flow.</span>
+            </div>
+            <div class="proof">
+              <strong>Corporate events</strong>
+              <span>Professional staff for brand moments, client hosting, and team gatherings.</span>
+            </div>
+            <div class="proof">
+              <strong>Custom details</strong>
+              <span>Bar menus, cups, napkins, and thoughtful touches matched to the occasion.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section id="services">
+        <div class="wrap">
+          <div class="section-head">
+            <h2>Hospitality support, matched to the event.</h2>
+            <p>
+              A clearer services section helps visitors understand what they can book quickly, then gives them a direct path to start the conversation.
+            </p>
+          </div>
+
+          <div class="services">
+            <article class="service">
+              <img
+                src="https://static.wixstatic.com/media/nsplsh_3cb3f26fc262472682e1b2d2a6624828~mv2.jpg/v1/fill/w_780,h_650,al_c,q_85,usm_0.66_1.00_0.01/nsplsh_3cb3f26fc262472682e1b2d2a6624828~mv2.jpg"
+                alt="Elegant event table set for dinner service"
+              />
+              <div class="service-body">
+                <span class="mini">Passed apps | Buffet | Plated service</span>
+                <h3>Wonderful Waitstaff</h3>
+                <p>
+                  Professional servers who keep guests cared for, tables cleared, service moving, and hosts free to enjoy the night.
+                </p>
+                <a href="#contact">Book waitstaff</a>
+              </div>
+            </article>
+
+            <article class="service">
+              <img
+                src="https://static.wixstatic.com/media/011f616116e74eca98fc0c0f09152c64.jpg/v1/fill/w_780,h_650,al_c,q_85,usm_0.66_1.00_0.01/011f616116e74eca98fc0c0f09152c64.jpg"
+                alt="Cocktail bar service setup"
+              />
+              <div class="service-body">
+                <span class="mini">Cocktails | Beer | Wine | Prep</span>
+                <h3>Brilliant Bartenders</h3>
+                <p>
+                  Beverage service tailored to the event, from bar prep and signature cocktails to polished guest interaction.
+                </p>
+                <a href="#contact">Book bartenders</a>
+              </div>
+            </article>
+
+            <article class="service">
+              <img
+                src="https://static.wixstatic.com/media/nsplsh_615c8347746b48a9b642f60cb902ff34~mv2.jpg/v1/fill/w_780,h_650,al_c,q_85,usm_0.66_1.00_0.01/nsplsh_615c8347746b48a9b642f60cb902ff34~mv2.jpg"
+                alt="Kitchen team preparing food"
+              />
+              <div class="service-body">
+                <span class="mini">Prep | Line cooks | Grill support</span>
+                <h3>Killer Kitchen Staff</h3>
+                <p>
+                  Capable kitchen support for prep, plating, grilling, and fast-paced event execution behind the scenes.
+                </p>
+                <a href="#contact">Book kitchen staff</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="split" id="process">
+        <div class="wrap split-grid">
+          <div class="intro">
+            <span class="eyebrow" style="color: var(--copper)">Simple booking flow</span>
+            <h2>From headcount to hospitality plan.</h2>
+            <p>
+              The current Wix site has useful service information, but the improved direction makes the next step feel obvious. Visitors should know who to contact, what details to share, and why the team is credible.
+            </p>
+          </div>
+
+          <div class="steps">
+            <div class="step">
+              <span class="number">1</span>
+              <div>
+                <h3>Share the event basics</h3>
+                <p>Date, location, guest count, venue style, and whether you need bar, floor, or kitchen support.</p>
+              </div>
+            </div>
+            <div class="step">
+              <span class="number">2</span>
+              <div>
+                <h3>Get a staffing recommendation</h3>
+                <p>The team suggests the right mix of bartenders, waitstaff, and culinary support for the flow of the event.</p>
+              </div>
+            </div>
+            <div class="step">
+              <span class="number">3</span>
+              <div>
+                <h3>Host with confidence</h3>
+                <p>Professional staff arrive ready to keep service smooth, guests comfortable, and the event moving.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="quote-band">
+        <div class="wrap quote-grid">
+          <img
+            src="https://static.wixstatic.com/media/nsplsh_3cb3f26fc262472682e1b2d2a6624828~mv2.jpg/v1/fill/w_820,h_760,al_c,q_85,usm_0.66_1.00_0.01/nsplsh_3cb3f26fc262472682e1b2d2a6624828~mv2.jpg"
+            alt="Table prepared for a formal event"
+          />
+          <div class="quote">
+            <div class="stars" aria-label="Five star review">*****</div>
+            <p>
+              "They transformed our corporate event with professional staff and personalized service that exceeded expectations."
+            </p>
+            <strong>Grace</strong>
+            <span>Corporate Event Client</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="details">
+        <div class="wrap">
+          <div class="section-head">
+            <h2>Details that make the event feel personal.</h2>
+            <p>
+              The existing custom cups, napkins, and bar menu idea can become a stronger visual section instead of feeling tucked away.
+            </p>
+          </div>
+          <div class="custom">
+            <div class="custom-item">
+              <h3>Custom bar moments</h3>
+              <p>Signature menus, beverage prep, and presentation details designed to match the tone of the event.</p>
+            </div>
+            <div class="custom-item">
+              <h3>Seamless service teams</h3>
+              <p>Front-of-house and back-of-house support working together so the event feels calm and considered.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta" id="contact">
+        <div class="wrap">
+          <div class="cta-panel">
+            <div>
+              <h2>Ready to staff the next event?</h2>
+              <p>
+                Tell Genuine Staffing & Events what you are planning, and they will help shape the right service team for the day.
+              </p>
+            </div>
+            <a class="button" href="tel:8434679489">Call 843.467.9489</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <span><strong>Genuine Staffing & Events</strong> | Where hospitality meets industry excellence</span>
+        <span>Bryan Elkins, Owner | Brittiny Lartitegui, Assistant/Marketing</span>
+      </div>
+    </footer>
+  </body>
+</html>
