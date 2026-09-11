@@ -3,10 +3,29 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Genuine Staffing & Events - Homepage Mockup</title>
+    <title>Harbor & Host Staffing - Event Staffing Concept</title>
     <meta
       name="description"
-      content="Concept homepage mockup for Genuine Staffing & Events."
+      content="A portfolio concept homepage for a premium event staffing company."
+    />
+    <meta property="og:title" content="Harbor & Host Staffing - Event Staffing Concept" />
+    <meta
+      property="og:description"
+      content="A portfolio concept exploring a more polished, conversion-focused event staffing homepage."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#1b2421" />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+    <link
+      rel="preload"
+      as="image"
+      href="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1800&q=84"
+      fetchpriority="high"
+    />
+    <link
+      rel="icon"
+      href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="%231b2421"/><path d="M17 16h30L32 33 17 16Z" fill="%23fffaf3"/><path d="M32 33v13M23 50h18" stroke="%23fffaf3" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="44" cy="15" r="5" fill="%23b96e43"/></svg>'
     />
     <style>
       :root {
@@ -120,6 +139,8 @@
         padding: 0 21px;
         background: var(--ink);
         color: #fffaf3;
+        cursor: pointer;
+        font: inherit;
         font-weight: 800;
         box-shadow: 0 14px 34px rgba(29, 42, 37, 0.18);
       }
@@ -139,7 +160,7 @@
         align-items: center;
         background:
           linear-gradient(90deg, rgba(20, 28, 25, 0.88), rgba(20, 28, 25, 0.58) 45%, rgba(20, 28, 25, 0.1)),
-          url("https://static.wixstatic.com/media/nsplsh_3cb3f26fc262472682e1b2d2a6624828~mv2.jpg/v1/fill/w_1800,h_1100,al_c,q_85,usm_0.66_1.00_0.01/nsplsh_3cb3f26fc262472682e1b2d2a6624828~mv2.jpg")
+          url("https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1800&q=84")
             center / cover;
       }
 
@@ -408,14 +429,14 @@
         color: #fffaf3;
         background:
           linear-gradient(180deg, rgba(29, 42, 37, 0.12), rgba(29, 42, 37, 0.85)),
-          url("https://static.wixstatic.com/media/011f616116e74eca98fc0c0f09152c64.jpg/v1/fill/w_900,h_680,al_c,q_85,usm_0.66_1.00_0.01/011f616116e74eca98fc0c0f09152c64.jpg")
+          url("https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=900&q=84")
             center / cover;
       }
 
       .custom-item:nth-child(2) {
         background:
           linear-gradient(180deg, rgba(29, 42, 37, 0.12), rgba(29, 42, 37, 0.85)),
-          url("https://static.wixstatic.com/media/nsplsh_615c8347746b48a9b642f60cb902ff34~mv2.jpg/v1/fill/w_900,h_680,al_c,q_85,usm_0.66_1.00_0.01/nsplsh_615c8347746b48a9b642f60cb902ff34~mv2.jpg")
+          url("https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=900&q=84")
             center / cover;
       }
 
@@ -435,9 +456,9 @@
 
       .cta-panel {
         display: grid;
-        grid-template-columns: 1fr auto;
-        gap: 30px;
-        align-items: center;
+        grid-template-columns: minmax(0, 0.88fr) minmax(320px, 0.72fr);
+        gap: 40px;
+        align-items: start;
         border-radius: 8px;
         padding: clamp(28px, 5vw, 56px);
         background: #fffdf9;
@@ -455,6 +476,54 @@
         color: var(--muted);
       }
 
+      .contact-form {
+        display: grid;
+        gap: 14px;
+      }
+
+      .field-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+      }
+
+      label {
+        display: grid;
+        gap: 7px;
+        color: #394740;
+        font-size: 0.78rem;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      input,
+      textarea,
+      select {
+        width: 100%;
+        min-height: 48px;
+        border: 1px solid rgba(27, 36, 33, 0.18);
+        border-radius: 8px;
+        background: #fffaf3;
+        color: var(--ink);
+        font: inherit;
+        font-weight: 400;
+        letter-spacing: 0;
+        text-transform: none;
+        padding: 12px 14px;
+      }
+
+      input::placeholder,
+      textarea::placeholder {
+        color: rgba(27, 36, 33, 0.48);
+        font-weight: 400;
+      }
+
+      textarea {
+        min-height: 112px;
+        resize: vertical;
+      }
+
       footer {
         padding: 36px 0;
         background: #141c19;
@@ -462,15 +531,24 @@
       }
 
       footer .wrap {
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 1fr auto;
         align-items: center;
-        justify-content: space-between;
-        gap: 18px;
+        gap: 24px;
       }
 
       footer strong {
+        display: block;
+        margin-bottom: 4px;
         color: #fffaf3;
+      }
+
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px;
+        color: rgba(255, 250, 243, 0.82);
+        font-size: 0.92rem;
       }
 
       @media (max-width: 860px) {
@@ -487,7 +565,7 @@
           min-height: 720px;
           background:
             linear-gradient(180deg, rgba(20, 28, 25, 0.9), rgba(20, 28, 25, 0.56)),
-            url("https://static.wixstatic.com/media/nsplsh_3cb3f26fc262472682e1b2d2a6624828~mv2.jpg/v1/fill/w_900,h_1100,al_c,q_85,usm_0.66_1.00_0.01/nsplsh_3cb3f26fc262472682e1b2d2a6624828~mv2.jpg")
+            url("https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=900&q=84")
               center / cover;
         }
 
@@ -497,7 +575,8 @@
         .split-grid,
         .quote-grid,
         .custom,
-        .cta-panel {
+        .cta-panel,
+        footer .wrap {
           grid-template-columns: 1fr;
         }
 
@@ -516,6 +595,10 @@
 
         .quote-grid img {
           min-height: 300px;
+        }
+
+        .field-grid {
+          grid-template-columns: 1fr;
         }
 
         .cta {
@@ -552,21 +635,21 @@
     <div class="topbar">
       <div class="wrap">
         <span>South Florida event staffing for private events, weddings, and corporate gatherings</span>
-        <span>843.467.9489 | 561.714.9455</span>
+        <span>hello@harborhost.example | 555.013.4820</span>
       </div>
     </div>
 
     <header class="nav" aria-label="Primary navigation">
       <div class="wrap">
         <a class="brand" href="#">
-          <strong>Genuine Staffing</strong>
+          <strong>Harbor & Host</strong>
           <span>Hospitality & Events</span>
         </a>
         <nav class="navlinks" aria-label="Site links">
           <a href="#services">Services</a>
           <a href="#process">How it works</a>
           <a href="#details">Event details</a>
-          <a href="#contact" class="button">Plan Your Staff</a>
+          <a href="#contact" class="button">Request a Quote</a>
         </nav>
       </div>
     </header>
@@ -575,10 +658,10 @@
       <section class="hero">
         <div class="wrap">
           <div class="hero-copy">
-            <span class="eyebrow">Concept homepage mockup</span>
+            <span class="eyebrow">South Florida event staffing</span>
             <h1>Event staff that make hosting feel effortless.</h1>
             <p>
-              Bartenders, waitstaff, and kitchen support for polished South Florida events. Genuine Staffing & Events helps hosts deliver warm service, smooth flow, and a guest experience that feels handled from start to finish.
+              Bartenders, waitstaff, and kitchen support for polished South Florida events. Harbor & Host helps hosts deliver warm service, smooth flow, and a guest experience that feels handled from start to finish.
             </p>
             <div class="hero-actions">
               <a class="button" href="#contact">Request Event Staff</a>
@@ -623,46 +706,58 @@
           <div class="services">
             <article class="service">
               <img
-                src="https://static.wixstatic.com/media/nsplsh_3cb3f26fc262472682e1b2d2a6624828~mv2.jpg/v1/fill/w_780,h_650,al_c,q_85,usm_0.66_1.00_0.01/nsplsh_3cb3f26fc262472682e1b2d2a6624828~mv2.jpg"
+                src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=780&q=84"
                 alt="Elegant event table set for dinner service"
+                width="780"
+                height="650"
+                loading="lazy"
+                decoding="async"
               />
               <div class="service-body">
                 <span class="mini">Passed apps | Buffet | Plated service</span>
-                <h3>Wonderful Waitstaff</h3>
+                <h3>Event Waitstaff</h3>
                 <p>
                   Professional servers who keep guests cared for, tables cleared, service moving, and hosts free to enjoy the night.
                 </p>
-                <a href="#contact">Book waitstaff</a>
+                <a href="#contact">Request waitstaff</a>
               </div>
             </article>
 
             <article class="service">
               <img
-                src="https://static.wixstatic.com/media/011f616116e74eca98fc0c0f09152c64.jpg/v1/fill/w_780,h_650,al_c,q_85,usm_0.66_1.00_0.01/011f616116e74eca98fc0c0f09152c64.jpg"
+                src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=780&q=84"
                 alt="Cocktail bar service setup"
+                width="780"
+                height="650"
+                loading="lazy"
+                decoding="async"
               />
               <div class="service-body">
                 <span class="mini">Cocktails | Beer | Wine | Prep</span>
-                <h3>Brilliant Bartenders</h3>
+                <h3>Craft Bartenders</h3>
                 <p>
                   Beverage service tailored to the event, from bar prep and signature cocktails to polished guest interaction.
                 </p>
-                <a href="#contact">Book bartenders</a>
+                <a href="#contact">Request bartenders</a>
               </div>
             </article>
 
             <article class="service">
               <img
-                src="https://static.wixstatic.com/media/nsplsh_615c8347746b48a9b642f60cb902ff34~mv2.jpg/v1/fill/w_780,h_650,al_c,q_85,usm_0.66_1.00_0.01/nsplsh_615c8347746b48a9b642f60cb902ff34~mv2.jpg"
+                src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=780&q=84"
                 alt="Kitchen team preparing food"
+                width="780"
+                height="650"
+                loading="lazy"
+                decoding="async"
               />
               <div class="service-body">
                 <span class="mini">Prep | Line cooks | Grill support</span>
-                <h3>Killer Kitchen Staff</h3>
+                <h3>Kitchen Support</h3>
                 <p>
                   Capable kitchen support for prep, plating, grilling, and fast-paced event execution behind the scenes.
                 </p>
-                <a href="#contact">Book kitchen staff</a>
+                <a href="#contact">Request kitchen staff</a>
               </div>
             </article>
           </div>
@@ -675,7 +770,7 @@
             <span class="eyebrow" style="color: var(--copper)">Simple booking flow</span>
             <h2>From headcount to hospitality plan.</h2>
             <p>
-              The current Wix site has useful service information, but the improved direction makes the next step feel obvious. Visitors should know who to contact, what details to share, and why the team is credible.
+              This concept makes the next step feel obvious. Visitors should know what kind of staff they can request, what details to share, and why the team is credible.
             </p>
           </div>
 
@@ -708,8 +803,12 @@
       <section class="quote-band">
         <div class="wrap quote-grid">
           <img
-            src="https://static.wixstatic.com/media/nsplsh_3cb3f26fc262472682e1b2d2a6624828~mv2.jpg/v1/fill/w_820,h_760,al_c,q_85,usm_0.66_1.00_0.01/nsplsh_3cb3f26fc262472682e1b2d2a6624828~mv2.jpg"
+            src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=820&q=84"
             alt="Table prepared for a formal event"
+            width="820"
+            height="760"
+            loading="lazy"
+            decoding="async"
           />
           <div class="quote">
             <div class="stars" aria-label="Five star review">*****</div>
@@ -727,7 +826,7 @@
           <div class="section-head">
             <h2>Details that make the event feel personal.</h2>
             <p>
-              The existing custom cups, napkins, and bar menu idea can become a stronger visual section instead of feeling tucked away.
+              Small presentation choices can make staffed events feel more thoughtful, more organized, and more memorable for guests.
             </p>
           </div>
           <div class="custom">
@@ -749,10 +848,35 @@
             <div>
               <h2>Ready to staff the next event?</h2>
               <p>
-                Tell Genuine Staffing & Events what you are planning, and they will help shape the right service team for the day.
+                Tell Harbor & Host what you are planning, and the team will help shape the right service plan for the day.
               </p>
             </div>
-            <a class="button" href="tel:8434679489">Call 843.467.9489</a>
+            <form class="contact-form" aria-label="Event staffing request form" onsubmit="return false;">
+              <div class="field-grid">
+                <label>
+                  Name
+                  <input type="text" placeholder="Your name" />
+                </label>
+                <label>
+                  Event Date
+                  <input type="text" placeholder="Month / day" />
+                </label>
+              </div>
+              <label>
+                Service Needed
+                <select>
+                  <option>Bartenders, waitstaff, or kitchen support</option>
+                  <option>Bartenders</option>
+                  <option>Waitstaff</option>
+                  <option>Kitchen staff</option>
+                </select>
+              </label>
+              <label>
+                Event Details
+                <textarea placeholder="Guest count, location, and what kind of support you need"></textarea>
+              </label>
+              <button class="button" type="submit">Request a Quote</button>
+            </form>
           </div>
         </div>
       </section>
@@ -760,8 +884,15 @@
 
     <footer>
       <div class="wrap">
-        <span><strong>Genuine Staffing & Events</strong> | Where hospitality meets industry excellence</span>
-        <span>Bryan Elkins, Owner | Brittiny Lartitegui, Assistant/Marketing</span>
+        <div>
+          <strong>Harbor & Host Staffing</strong>
+          <span>South Florida hospitality teams for private, wedding, and corporate events.</span>
+        </div>
+        <div class="footer-links" aria-label="Footer links">
+          <a href="#services">Services</a>
+          <a href="#process">How it works</a>
+          <a href="#contact">Request a Quote</a>
+        </div>
       </div>
     </footer>
   </body>
