@@ -15,12 +15,10 @@
     />
     <meta property="og:type" content="website" />
     <meta name="theme-color" content="#1b2421" />
-    <link rel="preconnect" href="https://images.unsplash.com" />
-    <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
     <link
       rel="preload"
       as="image"
-      href="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1800&q=84"
+      href="assets/event-table.jpg"
       fetchpriority="high"
     />
     <link
@@ -160,7 +158,7 @@
         align-items: center;
         background:
           linear-gradient(90deg, rgba(20, 28, 25, 0.88), rgba(20, 28, 25, 0.58) 45%, rgba(20, 28, 25, 0.1)),
-          url("https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1800&q=84")
+          url("assets/event-table.jpg")
             center / cover;
       }
 
@@ -429,14 +427,14 @@
         color: #fffaf3;
         background:
           linear-gradient(180deg, rgba(29, 42, 37, 0.12), rgba(29, 42, 37, 0.85)),
-          url("https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=900&q=84")
+          url("assets/bartender.jpg")
             center / cover;
       }
 
       .custom-item:nth-child(2) {
         background:
           linear-gradient(180deg, rgba(29, 42, 37, 0.12), rgba(29, 42, 37, 0.85)),
-          url("https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=900&q=84")
+          url("assets/kitchen-staff.jpg")
             center / cover;
       }
 
@@ -565,7 +563,7 @@
           min-height: 720px;
           background:
             linear-gradient(180deg, rgba(20, 28, 25, 0.9), rgba(20, 28, 25, 0.56)),
-            url("https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=900&q=84")
+            url("assets/event-table.jpg")
               center / cover;
         }
 
@@ -594,7 +592,9 @@
         }
 
         .quote-grid img {
-          min-height: 300px;
+          aspect-ratio: 16 / 9;
+          min-height: 0;
+          max-height: 220px;
         }
 
         .service img {
@@ -711,7 +711,7 @@
           <div class="services">
             <article class="service">
               <img
-                src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=780&q=84"
+                src="assets/event-table.jpg"
                 alt="Elegant event table set for dinner service"
                 width="780"
                 height="650"
@@ -730,7 +730,7 @@
 
             <article class="service">
               <img
-                src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=780&q=84"
+                src="assets/bartender.jpg"
                 alt="Cocktail bar service setup"
                 width="780"
                 height="650"
@@ -749,7 +749,7 @@
 
             <article class="service">
               <img
-                src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=780&q=84"
+                src="assets/kitchen-staff.jpg"
                 alt="Kitchen team preparing food"
                 width="780"
                 height="650"
@@ -808,7 +808,7 @@
       <section class="quote-band">
         <div class="wrap quote-grid">
           <img
-            src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=820&q=84"
+            src="assets/event-table.jpg"
             alt="Table prepared for a formal event"
             width="820"
             height="760"
